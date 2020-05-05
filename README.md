@@ -13,7 +13,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/jaredible/CS4020-Project-3">
-    <img src="#logo" alt="Logo" width="80" height="80">
+    <img src="[!logo]" alt="Logo" width="80" height="80">
   </a>
   
   <h3 align="center">Shopper</h3>
