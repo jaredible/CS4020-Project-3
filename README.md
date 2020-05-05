@@ -19,7 +19,7 @@
   <h3 align="center">Shopper</h3>
   
   <p align="center">
-    An awesome shopping list app to jumpstart your understanding!
+    An awesome shopping list app to jumpstart a project!
     <br />
     <a href="https://github.com/jaredible/CS4020-Project-3/wiki"><strong>Explore the docs »</strong></a>
     <br />
