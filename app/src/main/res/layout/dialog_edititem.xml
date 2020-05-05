@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    android:background="@drawable/all_roundeddarkshape"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="8dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:layout_marginBottom="16dp">
+
+            <EditText
+                android:id="@+id/text_name"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/all_roundedlightshape"
+                android:gravity="center"
+                android:hint="@string/dialog_edit_item_text_name"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="4dp"
+                android:textSize="20sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:layout_marginBottom="16dp">
+
+            <EditText
+                android:id="@+id/text_price"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/all_roundedlightshape"
+                android:gravity="center"
+                android:hint="@string/dialog_edit_item_text_price"
+                android:importantForAutofill="no"
+                android:inputType="numberDecimal"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="4dp"
+                android:textSize="20sp" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/button_minus"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_marginEnd="16dp"
+                android:adjustViewBounds="true"
+                android:background="@null"
+                android:scaleType="fitXY"
+                android:src="@drawable/item_decrementquantity"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/text_quantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="4dp"
+                android:text="@string/dialog_edit_item_text_quantity"
+                android:textColor="@color/custom7"
+                android:textSize="40sp"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/button_plus"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_marginStart="16dp"
+                android:adjustViewBounds="true"
+                android:background="@null"
+                android:scaleType="fitXY"
+                android:src="@drawable/item_incrementquantity"
+                tools:ignore="ContentDescription" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="8dp"
+            tools:ignore="ButtonStyle">
+
+            <Button
+                android:id="@+id/button_save"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:background="@drawable/all_iconstate"
+                android:stateListAnimator="@null"
+                android:text="@string/dialog_edit_item_button_save"
+                android:textColor="@color/custom1"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/button_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/all_iconstate"
+                android:stateListAnimator="@null"
+                android:text="@string/dialog_edit_item_button_cancel"
+                android:textColor="@color/custom7"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/button_remove"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/all_iconstate"
+                android:stateListAnimator="@null"
+                android:text="@string/dialog_edit_item_button_remove"
+                android:textColor="@color/custom10"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
