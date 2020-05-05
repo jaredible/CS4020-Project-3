@@ -13,7 +13,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/jaredible/CS4020-Project-3">
-    <img src="[!logo]" alt="Logo" width="80" height="80">
+    <img src="https://github.com/jaredible/CS4020-Project-3/blob/master/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" alt="Logo" width="80" height="80">
   </a>
   
   <h3 align="center">Shopper</h3>
@@ -49,5 +49,4 @@
 [license-url]: https://github.com/jaredible/CS4020-Project-3/blob/master/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/jared-michael-diehl
-[logo]: https://github.com/jaredible/CS4020-Project-3/blob/master/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png
 [cover]: content/shopper.gif
