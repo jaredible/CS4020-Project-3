@@ -10,8 +10,8 @@ interface GroupDao {
     @Query("SELECT * FROM `group` ORDER BY title")
     fun getGroups(): LiveData<List<Group>>
 
-    @Query("SELECT * FROM `group` WHERE id = :groupId")
-    fun getGroup(groupId: Long): LiveData<Group>
+    @Query("SELECT * FROM `group` WHERE id = :id")
+    fun getGroup(id: Long): LiveData<Group>
 
     @Query("UPDATE `group` SET title = :title WHERE id = :id")
     suspend fun updateTitle(id: Long, title: String)

@@ -25,8 +25,8 @@ interface ItemDao {
     @Query("UPDATE item SET checked = :checked WHERE id = :itemId AND group_id = :groupId")
     suspend fun updateChecked(itemId: Long, groupId: Long, checked: Boolean)
 
-    @Query("DELETE FROM item WHERE id = :itemId")
-    suspend fun delete(itemId: Long)
+    @Query("DELETE FROM item WHERE id = :id")
+    suspend fun delete(id: Long)
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insert(item: Item)

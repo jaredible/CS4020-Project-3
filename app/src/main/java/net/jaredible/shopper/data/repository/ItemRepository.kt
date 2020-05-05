@@ -17,7 +17,7 @@ class ItemRepository(private val itemDao: ItemDao) {
 
     suspend fun updateChecked(itemId: Long, groupId: Long, checked: Boolean) = itemDao.updateChecked(itemId, groupId, checked)
 
-    suspend fun delete(itemId: Long) = itemDao.delete(itemId)
+    suspend fun delete(id: Long) = itemDao.delete(id)
 
     suspend fun insert(item: Item) = itemDao.insert(item)
 
