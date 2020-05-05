@@ -17,10 +17,7 @@ class AddGroupDialog : BaseDialog() {
 
     companion object {
         val TAG = AddGroupDialog::class.java.simpleName
-
-        fun newInstance(): AddGroupDialog {
-            return AddGroupDialog()
-        }
+        private const val BUNDLE_GROUP_TITLE = "BUNDLE_GROUP_TITLE"
     }
 
     private lateinit var viewModel: AddGroupViewModel
@@ -54,6 +51,14 @@ class AddGroupDialog : BaseDialog() {
 
         buttonAdd.setOnClickListener(onAddClicked())
         buttonCancel.setOnClickListener(onCancelClicked())
+
+        savedInstanceState?.let { textTitle.setText(it.getString(BUNDLE_GROUP_TITLE)) }
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+
+        outState.putString(BUNDLE_GROUP_TITLE, textTitle.text.toString())
     }
 
     private fun onAddClicked(): View.OnClickListener {

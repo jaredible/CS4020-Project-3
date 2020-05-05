@@ -21,7 +21,7 @@ class EditItemViewModel(application: Application, private val groupId: Long, pri
 
     fun updateItemPrice(price: String) {
         viewModelScope.launch {
-            itemRepository.updatePrice(itemId, groupId, (price.toFloat() * 100).toInt())
+            itemRepository.updatePrice(itemId, groupId, if (price.isNotBlank()) (price.toFloat() * 100).toInt() else 0)
         }
     }
 

@@ -18,6 +18,7 @@ class EditGroupDialog : BaseDialog() {
 
     companion object {
         val TAG = EditGroupDialog::class.java.simpleName
+        private const val BUNDLE_GROUP_TITLE = "BUNDLE_GROUP_TITLE"
         private const val ARGUMENT_GROUP_ID = "ARGUMENT_GROUP_ID"
 
         fun newInstance(groupId: Long): EditGroupDialog {
@@ -66,13 +67,17 @@ class EditGroupDialog : BaseDialog() {
         buttonCancel.setOnClickListener(onCancelClicked())
         buttonRemove.setOnClickListener(onRemoveClicked())
 
-        fun1()
+        viewModel.getGroup().observeOnce(this, Observer { group ->
+            textTitle.setText(group.title)
+
+            savedInstanceState?.let { textTitle.setText(it.getString(BUNDLE_GROUP_TITLE)) }
+        })
     }
 
-    private fun fun1() {
-        viewModel.getGroup().observeOnce(this, Observer {
-            textTitle.setText(it.title)
-        })
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+
+        outState.putString(BUNDLE_GROUP_TITLE, textTitle.text.toString())
     }
 
     private fun onSaveClicked(): View.OnClickListener {

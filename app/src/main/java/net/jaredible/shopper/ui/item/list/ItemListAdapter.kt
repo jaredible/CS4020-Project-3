@@ -49,7 +49,7 @@ class ItemListAdapter(private val itemListView: ItemListView) : BaseAdapter<Item
 
             checkboxCheck.isChecked = item.checked
             textName.text = item.name
-            textPrice.text = view.context.getString(R.string.item_item_text_price, CurrencyUtil.convert(item.price))
+            textPrice.text = view.context.getString(R.string.item_item_text_price, CurrencyUtil.format(item.price))
             textQuantity.text = item.quantity.toString()
 
             view.setOnClickListener(onItemClicked(item))
@@ -59,7 +59,7 @@ class ItemListAdapter(private val itemListView: ItemListView) : BaseAdapter<Item
 
         private fun onItemClicked(item: Item): View.OnClickListener {
             return View.OnClickListener {
-                itemListView.onItemChecked(item.id, !checkboxCheck.isChecked)
+                itemListView.onItemChecked(item.id, !item.checked)
             }
         }
 

@@ -29,6 +29,7 @@
                 android:hint="@string/dialog_edit_group_text_title"
                 android:importantForAutofill="no"
                 android:inputType="text"
+                android:maxLength="10"
                 android:paddingHorizontal="16dp"
                 android:paddingVertical="4dp"
                 android:textSize="20sp" />

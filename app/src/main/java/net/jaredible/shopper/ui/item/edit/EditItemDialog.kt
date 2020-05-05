@@ -4,6 +4,8 @@ import android.app.Dialog
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -21,7 +23,9 @@ class EditItemDialog : BaseDialog() {
 
     companion object {
         val TAG = EditItemDialog::class.java.simpleName
-        private const val BUNDLE_QUANTITY = "BUNDLE_QUANTITY"
+        private const val BUNDLE_ITEM_NAME = "BUNDLE_ITEM_NAME"
+        private const val BUNDLE_ITEM_PRICE = "BUNDLE_ITEM_PRICE"
+        private const val BUNDLE_ITEM_QUANTITY = "BUNDLE_ITEM_QUANTITY"
         private const val ARGUMENT_GROUP_ID = "ARGUMENT_GROUP_ID"
         private const val ARGUMENT_ITEM_ID = "ARGUMENT_ITEM_ID"
 
@@ -77,6 +81,7 @@ class EditItemDialog : BaseDialog() {
         buttonCancel = view.findViewById(R.id.button_cancel)
         buttonRemove = view.findViewById(R.id.button_remove)
 
+        textName.addTextChangedListener(onItemNameChanged())
         buttonMinus.setOnClickListener(onMinusClicked())
         buttonPlus.setOnClickListener(onPlusClicked())
         buttonSave.setOnClickListener(onSaveClicked())
@@ -85,36 +90,67 @@ class EditItemDialog : BaseDialog() {
 
         viewModel.getItem().observeOnce(this, Observer { item ->
             textName.setText(item.name)
-            textPrice.setText(CurrencyUtil.convert(item.price))
+            textPrice.setText(CurrencyUtil.format(item.price))
             textQuantity.text = item.quantity.toString()
 
-            savedInstanceState?.let { textQuantity.text = it.getString(BUNDLE_QUANTITY) }
+            savedInstanceState?.let {
+                textName.setText(it.getString(BUNDLE_ITEM_NAME))
+                textPrice.setText(it.getString(BUNDLE_ITEM_PRICE))
+                textQuantity.text = it.getString(BUNDLE_ITEM_QUANTITY)
+            }
+
+            setQuantityButtonsState()
+            setSaveButtonState()
         })
     }
 
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
 
-        outState.putString(BUNDLE_QUANTITY, textQuantity.text.toString())
+        outState.putString(BUNDLE_ITEM_NAME, textName.text.toString())
+        outState.putString(BUNDLE_ITEM_PRICE, textPrice.text.toString())
+        outState.putString(BUNDLE_ITEM_QUANTITY, textQuantity.text.toString())
+    }
+
+    private fun setQuantityButtonsState() {
+        val quantity = textQuantity.text.toString().toInt()
+        buttonMinus.isEnabled = quantity > 0
+        buttonPlus.isEnabled = quantity < 10
+    }
+
+    private fun setSaveButtonState() {
+        buttonSave.isEnabled = textName.text.toString().isNotBlank()
+    }
+
+    private fun onItemNameChanged(): TextWatcher {
+        return object : TextWatcher {
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) { setSaveButtonState() }
+            override fun afterTextChanged(s: Editable?) {}
+        }
     }
 
     private fun onMinusClicked(): View.OnClickListener {
         return View.OnClickListener {
             textQuantity.text = textQuantity.text.toString().toInt().dec().toString()
+            setQuantityButtonsState()
         }
     }
 
     private fun onPlusClicked(): View.OnClickListener {
         return View.OnClickListener {
             textQuantity.text = textQuantity.text.toString().toInt().inc().toString()
+            setQuantityButtonsState()
         }
     }
 
     private fun onSaveClicked(): View.OnClickListener {
         return View.OnClickListener {
-            viewModel.updateItemName(textName.text.toString())
-            viewModel.updateItemPrice(textPrice.text.toString())
-            viewModel.updateItemQuantity(textQuantity.text.toString())
+            viewModel.apply {
+                updateItemName(textName.text.toString())
+                updateItemPrice(textPrice.text.toString())
+                updateItemQuantity(textQuantity.text.toString())
+            }
             dismiss()
         }
     }

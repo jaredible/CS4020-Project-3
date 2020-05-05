@@ -4,6 +4,8 @@ import android.app.Dialog
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import android.view.*
 import android.widget.Button
 import android.widget.EditText
@@ -17,7 +19,9 @@ class AddItemDialog : BaseDialog() {
 
     companion object {
         val TAG = AddItemDialog::class.java.simpleName
-        private const val BUNDLE_QUANTITY = "BUNDLE_QUANTITY"
+        private const val BUNDLE_ITEM_NAME = "BUNDLE_ITEM_NAME"
+        private const val BUNDLE_ITEM_PRICE = "BUNDLE_ITEM_PRICE"
+        private const val BUNDLE_ITEM_QUANTITY = "BUNDLE_ITEM_QUANTITY"
         private const val ARGUMENT_GROUP_ID = "ARGUMENT_GROUP_ID"
 
         fun newInstance(groupId: Long): AddItemDialog {
@@ -68,29 +72,59 @@ class AddItemDialog : BaseDialog() {
         buttonAdd = view.findViewById(R.id.button_add)
         buttonCancel = view.findViewById(R.id.button_cancel)
 
+        textName.addTextChangedListener(onItemNameChanged())
         buttonMinus.setOnClickListener(onMinusClicked())
         buttonPlus.setOnClickListener(onPlusClicked())
         buttonAdd.setOnClickListener(onAddClicked())
         buttonCancel.setOnClickListener(onCancelClicked())
 
-        savedInstanceState?.let { textQuantity.text = it.getString(BUNDLE_QUANTITY) }
+        savedInstanceState?.let {
+            textName.setText(it.getString(BUNDLE_ITEM_NAME))
+            textPrice.setText(it.getString(BUNDLE_ITEM_PRICE))
+            textQuantity.text = it.getString(BUNDLE_ITEM_QUANTITY)
+        }
+
+        setQuantityButtonsState()
+        setAddButtonState()
     }
 
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
 
-        outState.putString(BUNDLE_QUANTITY, textQuantity.text.toString())
+        outState.putString(BUNDLE_ITEM_NAME, textName.text.toString())
+        outState.putString(BUNDLE_ITEM_PRICE, textPrice.text.toString())
+        outState.putString(BUNDLE_ITEM_QUANTITY, textQuantity.text.toString())
+    }
+
+    private fun setQuantityButtonsState() {
+        val quantity = textQuantity.text.toString().toInt()
+        buttonMinus.isEnabled = quantity > 0
+        buttonPlus.isEnabled = quantity < 10
+    }
+
+    private fun setAddButtonState() {
+        buttonAdd.isEnabled = textName.text.toString().isNotBlank()
+    }
+
+    private fun onItemNameChanged(): TextWatcher {
+        return object : TextWatcher {
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) { setAddButtonState() }
+            override fun afterTextChanged(s: Editable?) {}
+        }
     }
 
     private fun onMinusClicked(): View.OnClickListener {
         return View.OnClickListener {
             textQuantity.text = textQuantity.text.toString().toInt().dec().toString()
+            setQuantityButtonsState()
         }
     }
 
     private fun onPlusClicked(): View.OnClickListener {
         return View.OnClickListener {
             textQuantity.text = textQuantity.text.toString().toInt().inc().toString()
+            setQuantityButtonsState()
         }
     }
 

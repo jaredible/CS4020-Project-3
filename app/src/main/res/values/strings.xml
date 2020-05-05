@@ -1,4 +1,5 @@
 <resources>
+
     <string name="app_name">Shopper</string>
 
     <!-- group list layout -->
@@ -46,4 +47,5 @@
     <string name="dialog_edit_item_button_save">Save</string>
     <string name="dialog_edit_item_button_cancel">Cancel</string>
     <string name="dialog_edit_item_button_remove">Remove</string>
+
 </resources>

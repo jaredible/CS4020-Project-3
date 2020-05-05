@@ -72,7 +72,7 @@ class ItemListActivity : BaseActivity(), ItemListView {
             displayTotals(it)
         })
 
-        viewModel.getGroup().observe(this, Observer {
+        viewModel.getGroup().observeOnce(this, Observer {
             textTitle.text = it.title
         })
     }
@@ -81,7 +81,7 @@ class ItemListActivity : BaseActivity(), ItemListView {
         val totalPrice = items.map { it.price }.sum()
         val totalQuantity = items.map { it.quantity }.sum()
 
-        textTotalPrice.text = getString(R.string.item_item_text_price, CurrencyUtil.convert(totalPrice))
+        textTotalPrice.text = getString(R.string.item_item_text_price, CurrencyUtil.format(totalPrice))
         textTotalQuantity.text = totalQuantity.toString()
     }
 

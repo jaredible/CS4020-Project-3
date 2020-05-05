@@ -14,7 +14,7 @@ class AddItemViewModel(application: Application, private val groupId: Long) : Ba
 
     fun addItem(name: String, price: String, quantity: String) {
         viewModelScope.launch {
-            itemRepository.insert(Item(0, groupId, name, (price.toFloat() * 100).toInt(), quantity.toInt(), false))
+            itemRepository.insert(Item(0, groupId, name, if (price.isNotBlank()) (price.toFloat() * 100).toInt() else 0, quantity.toInt(), false))
         }
     }
 

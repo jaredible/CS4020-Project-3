@@ -11,6 +11,7 @@
 -->
 
 <resources>
+
     <color name="colorPrimary">@color/gold1</color>
     <color name="colorPrimaryDark">@color/gold2</color>
     <color name="colorAccent">@color/gray4</color>
@@ -18,24 +19,27 @@
     <color name="custom1">@color/gold1</color>
     <color name="custom2">@color/gold2</color>
     <color name="custom3">@android:color/white</color>
-    <color name="custom4">@color/gray5</color>
-    <color name="custom5">@color/gray2</color>
-    <color name="custom6">@color/gray3</color>
+    <color name="custom4">@color/gray6</color>
+    <color name="custom5">@color/gray3</color>
+    <color name="custom6">@color/gray4</color>
     <color name="custom7">@android:color/white</color>
-    <color name="custom8">@color/gray4</color>
+    <color name="custom8">@color/gray5</color>
     <color name="custom9">@color/transparent1</color>
     <color name="custom10">@color/red2</color>
     <color name="custom11">@color/red1</color>
-    <color name="custom12">#F1F1F1</color>
+    <color name="custom12">@color/gray1</color>
+    <color name="custom13">@color/gray2</color>
 
     <color name="gray1">#F1F1F1</color>
-    <color name="gray2">#B0B0B0</color>
-    <color name="gray3">#79797A</color>
-    <color name="gray4">#333333</color>
-    <color name="gray5">#303030</color>
+    <color name="gray2">#E7E7E7</color>
+    <color name="gray3">#B0B0B0</color>
+    <color name="gray4">#79797A</color>
+    <color name="gray5">#333333</color>
+    <color name="gray6">#303030</color>
     <color name="gold1">#CCAA75</color>
     <color name="gold2">#917442</color>
     <color name="red1">#F58E8B</color>
     <color name="red2">#F6514B</color>
     <color name="transparent1">#99FFFFFF</color>
+
 </resources>

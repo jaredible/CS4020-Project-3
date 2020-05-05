@@ -1,7 +1,5 @@
 package net.jaredible.shopper.ui.group.list
 
-import android.content.Context
-import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
@@ -18,12 +16,6 @@ import net.jaredible.shopper.ui.group.edit.EditGroupDialog
 import net.jaredible.shopper.ui.item.list.ItemListActivity
 
 class GroupListActivity : BaseActivity(), GroupListView {
-
-    companion object {
-        fun getStartIntent(context: Context): Intent {
-            return Intent(context, GroupListActivity::class.java)
-        }
-    }
 
     private lateinit var recyclerView: RecyclerView
     private lateinit var viewAdapter: GroupListAdapter
@@ -62,7 +54,7 @@ class GroupListActivity : BaseActivity(), GroupListView {
     }
 
     override fun showAddGroupDialog() {
-        val dialog = AddGroupDialog.newInstance()
+        val dialog = AddGroupDialog()
         dialog.show(supportFragmentManager, AddGroupDialog.TAG)
     }
 

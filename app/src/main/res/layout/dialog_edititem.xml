@@ -29,6 +29,7 @@
                 android:hint="@string/dialog_edit_item_text_name"
                 android:importantForAutofill="no"
                 android:inputType="text"
+                android:maxLength="10"
                 android:paddingHorizontal="16dp"
                 android:paddingVertical="4dp"
                 android:textSize="20sp" />
@@ -50,6 +51,7 @@
                 android:hint="@string/dialog_edit_item_text_price"
                 android:importantForAutofill="no"
                 android:inputType="numberDecimal"
+                android:maxLength="10"
                 android:paddingHorizontal="16dp"
                 android:paddingVertical="4dp"
                 android:textSize="20sp" />
