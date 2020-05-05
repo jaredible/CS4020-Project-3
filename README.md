@@ -38,6 +38,10 @@
 ![Shopper Group List](https://github.com/jaredible/CS4020-Project-3/blob/master/content/group_list.png)
 ![Shopper Add Group](https://github.com/jaredible/CS4020-Project-3/blob/master/content/add_group.png)
 ![Shopper Edit Group](https://github.com/jaredible/CS4020-Project-3/blob/master/content/edit_group.png)
+![Shopper Item List](https://github.com/jaredible/CS4020-Project-3/blob/master/content/item_list.png)
+![Shopper Add Item](https://github.com/jaredible/CS4020-Project-3/blob/master/content/add_item.png)
+![Shopper Edit Item](https://github.com/jaredible/CS4020-Project-3/blob/master/content/edit_item.png)
+
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
