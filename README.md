@@ -13,7 +13,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/jaredible/CS4020-Project-3">
-    <img src="logo" alt="Logo" width="80" height="80">
+    <img src="#logo" alt="Logo" width="80" height="80">
   </a>
   
   <h3 align="center">Shopper</h3>
@@ -21,7 +21,7 @@
   <p align="center">
     An awesome shopping list app to jumpstart your understanding!
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/jaredible/CS4020-Project-3/wiki"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <a href="#">View Demo</a>
