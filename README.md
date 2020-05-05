@@ -34,7 +34,7 @@
 
 
 
-[![Shopper][cover]](https://github.com/jaredible/CS4020-Project-3)
+![Shopper](https://github.com/jaredible/CS4020-Project-3/blob/master/content/shopper.gif)
 
 
 
@@ -49,4 +49,3 @@
 [license-url]: https://github.com/jaredible/CS4020-Project-3/blob/master/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/jared-michael-diehl
-[cover]: content/shopper.gif
