@@ -78,7 +78,7 @@ class ItemListActivity : BaseActivity(), ItemListView {
     }
 
     private fun displayTotals(items: List<Item>) {
-        val totalPrice = items.map { it.price }.sum()
+        val totalPrice = items.map { it.price * it.quantity }.sum()
         val totalQuantity = items.map { it.quantity }.sum()
 
         textTotalPrice.text = getString(R.string.item_item_text_price, CurrencyUtil.format(totalPrice))
