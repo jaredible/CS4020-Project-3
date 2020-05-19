@@ -4,7 +4,6 @@
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
 
@@ -51,7 +50,5 @@
 [forks-url]: https://github.com/jaredible/CS4020-Project-3/network/members
 [stars-shield]: https://img.shields.io/github/stars/jaredible/CS4020-Project-3
 [stars-url]: https://github.com/jaredible/CS4020-Project-3/stargazers
-[license-shield]: https://img.shields.io/github/license/jaredible/CS4020-Project-3
-[license-url]: https://github.com/jaredible/CS4020-Project-3/blob/master/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/jared-michael-diehl
