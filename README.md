@@ -1,6 +1,8 @@
 <!-- Hello :) -->
 
 <!-- PROJECT SHIELDS -->
+[![HitCount](http://hits.dwyl.com/Jaredible/CS4020-Project-3.svg)](http://hits.dwyl.com/Jaredible/CS4020-Project-3)
+
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
