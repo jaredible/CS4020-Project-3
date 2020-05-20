@@ -7,6 +7,8 @@
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
+![Code size](https://img.shields.io/github/languages/code-size/Jaredible/CS4020-Project-3.svg)
+![GitHub repo size](https://img.shields.io/github/repo-size/Jaredible/CS4020-Project-3.svg)
 ![Lines of Code](https://tokei.rs/b1/github/Jaredible/CS4020-Project-3?category=code)
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
