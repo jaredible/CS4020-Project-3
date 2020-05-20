@@ -6,6 +6,7 @@
 [![HitCount](http://hits.dwyl.com/Jaredible/CS4020-Project-3.svg)](http://hits.dwyl.com/Jaredible/CS4020-Project-3)
 [![GitHub All Releases](https://img.shields.io/github/downloads/Jaredible/CS4020-Project-3/total.svg)](https://github.com/Jaredible/CS4020-Project-3/releases/)
 
+[![Release](https://img.shields.io/github/release/Jaredible/CS4020-Project-3.svg)](https://github.com/Jaredible/CS4020-Project-3/releases/)
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
