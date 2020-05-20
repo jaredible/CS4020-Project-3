@@ -11,7 +11,7 @@
 ![GitHub repo size](https://img.shields.io/github/repo-size/Jaredible/CS4020-Project-3.svg)
 ![Lines of Code](https://tokei.rs/b1/github/Jaredible/CS4020-Project-3?category=code)
 [![LinkedIn][linkedin-shield]][linkedin-url]
-[![Say Thanks!](https://img.shields.io/badge/Say%20Thanks-!-ff69b4.svg)](https://saythanks.io/to/jareddiehl96@gmail.com)
+[![Say Thanks!](https://img.shields.io/badge/say-thanks-ff69b4.svg)](https://saythanks.io/to/jareddiehl96@gmail.com)
 
 
 
