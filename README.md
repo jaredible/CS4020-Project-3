@@ -10,6 +10,7 @@
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
+![Lines of Code](https://tokei.rs/b1/github/Jaredible/CS4020-Project-3?category=code)
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
 
