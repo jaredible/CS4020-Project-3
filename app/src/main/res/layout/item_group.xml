@@ -2,6 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/vRoot"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@color/custom13"
@@ -16,18 +17,18 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/text_title"
+            android:id="@+id/vTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:text="@string/item_group_text_title"
             android:textColor="@color/custom8"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            tools:text="Title" />
 
     </LinearLayout>
 
     <ImageButton
-        android:id="@+id/button_edit"
+        android:id="@+id/vEdit"
         android:layout_width="35dp"
         android:layout_height="35dp"
         android:layout_alignParentEnd="true"

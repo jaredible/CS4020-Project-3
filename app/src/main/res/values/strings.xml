@@ -1,51 +1,16 @@
 <resources>
-
-    <string name="app_name">Shopper</string>
-
-    <!-- group list layout -->
-    <string name="activity_group_list_text_title">Shopping Lists</string>
-    <string name="activity_group_list_text_empty_list">No shopping lists</string>
-    <string name="activity_group_list_button_add">Create Shopping List</string>
-
-    <!-- group item layout -->
-    <string name="item_group_text_title">Title</string>
-
-    <!-- add group layout -->
-    <string name="dialog_add_group_text_title">Title</string>
-    <string name="dialog_add_group_button_add">Add</string>
-    <string name="dialog_add_group_button_cancel">Cancel</string>
-
-    <!-- edit group layout -->
-    <string name="dialog_edit_group_text_title">Title</string>
-    <string name="dialog_edit_group_button_save">Save</string>
-    <string name="dialog_edit_group_button_cancel">Cancel</string>
-    <string name="dialog_edit_group_button_remove">Remove</string>
-
-    <!-- item list layout -->
-    <string name="activity_item_list_text_title">Title</string>
-    <string name="activity_item_list_text_total_price">$0.00</string>
-    <string name="activity_item_list_text_total_quantity">0</string>
-    <string name="activity_item_list_text_empty_list">No items</string>
-    <string name="activity_item_list_button_add">Create Item</string>
-
-    <!-- item item layout -->
-    <string name="item_item_text_name">Name</string>
-    <string name="item_item_text_price">$%1$s</string>
-    <string name="item_item_text_quantity">0</string>
-
-    <!-- add item layout -->
-    <string name="dialog_add_item_text_name">Name</string>
-    <string name="dialog_add_item_text_price">Price</string>
-    <string name="dialog_add_item_text_quantity">0</string>
-    <string name="dialog_add_item_button_add">Add</string>
-    <string name="dialog_add_item_button_cancel">Cancel</string>
-
-    <!-- edit item layout -->
-    <string name="dialog_edit_item_text_name">Name</string>
-    <string name="dialog_edit_item_text_price">Price</string>
-    <string name="dialog_edit_item_text_quantity">0</string>
-    <string name="dialog_edit_item_button_save">Save</string>
-    <string name="dialog_edit_item_button_cancel">Cancel</string>
-    <string name="dialog_edit_item_button_remove">Remove</string>
-
+    <string name="app_name">JShop</string>
+    <string name="shopping_lists">Shopping Lists</string>
+    <string name="no_shopping_lists">No shopping lists</string>
+    <string name="create_shopping_list">Create Shopping List</string>
+    <string name="title">Title</string>
+    <string name="add">Add</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+    <string name="remove">Remove</string>
+    <string name="no_items">No items</string>
+    <string name="create_item">Create item</string>
+    <string name="name">Name</string>
+    <string name="price">Price</string>
+    <string name="currency_format">$%1$s</string>
 </resources>

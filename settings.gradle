@@ -1,2 +1,2 @@
-rootProject.name='Shopper'
+rootProject.name='JShop'
 include ':app'

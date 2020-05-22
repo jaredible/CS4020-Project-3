@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="net.jaredible.shopper">
+    package="net.jaredible.jshop">
 
     <application
         android:name=".App"
         android:allowBackup="true"
+        android:fullBackupContent=""
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.group.list.GroupListActivity" />
-        <activity android:name=".ui.item.list.ItemListActivity" />
+
         <activity
             android:name=".ui.splash.SplashActivity"
             android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
@@ -20,6 +20,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".ui.group.list.GroupListActivity" />
+
+        <activity android:name=".ui.item.list.ItemListActivity" />
+
     </application>
 
 </manifest>

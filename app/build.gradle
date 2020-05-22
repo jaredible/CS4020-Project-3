@@ -8,18 +8,18 @@ android {
     buildToolsVersion "29.0.3"
 
     defaultConfig {
-        applicationId "net.jaredible.shopper"
-        minSdkVersion 21
+        applicationId "net.jaredible.jshop"
+        minSdkVersion 23
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
-
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
+            shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
@@ -48,9 +48,6 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-viewmodel-savedstate:$lifecycle_version"
     kapt "androidx.lifecycle:lifecycle-compiler:$lifecycle_version"
 
-    // Material design
-    implementation "com.google.android.material:material:$material_version"
-
     implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_version"
-    implementation 'androidx.recyclerview:recyclerview:1.2.0-alpha02'
+    implementation 'androidx.recyclerview:recyclerview:1.2.0-alpha03'
 }

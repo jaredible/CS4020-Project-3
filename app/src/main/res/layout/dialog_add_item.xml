@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/vRoot"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    android:background="@drawable/all_roundeddarkshape"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="8dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:layout_marginBottom="16dp">
+
+            <EditText
+                android:id="@+id/vName"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/all_roundedlightshape"
+                android:gravity="center"
+                android:hint="@string/name"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:maxLength="10"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="4dp"
+                android:textSize="20sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:layout_marginBottom="16dp">
+
+            <EditText
+                android:id="@+id/vPrice"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/all_roundedlightshape"
+                android:gravity="center"
+                android:hint="@string/price"
+                android:importantForAutofill="no"
+                android:inputType="numberDecimal"
+                android:maxLength="10"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="4dp"
+                android:textSize="20sp" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/vMinus"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_marginEnd="16dp"
+                android:adjustViewBounds="true"
+                android:background="@null"
+                android:scaleType="fitXY"
+                android:src="@drawable/item_decrementquantity"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/vQuantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="4dp"
+                android:textColor="@color/custom7"
+                android:textSize="40sp"
+                android:textStyle="bold"
+                tools:text="0" />
+
+            <ImageButton
+                android:id="@+id/vPlus"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_marginStart="16dp"
+                android:adjustViewBounds="true"
+                android:background="@null"
+                android:scaleType="fitXY"
+                android:src="@drawable/item_incrementquantity"
+                tools:ignore="ContentDescription" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="8dp"
+            tools:ignore="ButtonStyle">
+
+            <Button
+                android:id="@+id/vAdd"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:background="@drawable/all_iconstate"
+                android:stateListAnimator="@null"
+                android:text="@string/add"
+                android:textColor="@color/custom1"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/vCancel"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/all_iconstate"
+                android:stateListAnimator="@null"
+                android:text="@string/cancel"
+                android:textColor="@color/custom7"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
